@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dikxant Bhandari — Portfolio</title>
+  <meta name="description" content="Portfolio of Dikxant Bhandari — CS major, UI/UX & builder." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script src="https://kit.fontawesome.com/9e2bcb5a7b.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:," />
+</head>
+<body class="min-h-screen text-slate-100 selection:bg-blue-300/30 selection:text-white relative overflow-x-hidden">
+
+  <!--  VIDEO -->
+  <video autoplay muted loop playsinline id="bgVideo"
+         class="fixed inset-0 w-full h-full object-cover z-[-2] brightness-[0.35] saturate-[1.2] contrast-[1.1]">
+    <source src="assets/bg.mp4" type="video/mp4" />
+  </video>
+  
+  <div class="fixed inset-0 bg-gradient-to-b from-[#0a1630] via-[#081226] to-[#050b1c] z-[-3]"></div>
+
+  <!--NAVBAR-->
+  <header class="navbar sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/5 border-b border-white/10">
+    <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+      <a href="#home" class="font-semibold tracking-wide nav-brand">DB.</a>
+
+      <!-- Desktop: main links -->
+      <ul class="hidden md:flex items-center gap-6">
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Desktop-->
+      <div class="hidden md:flex items-center gap-3">
+        <!-- GitHub -->
+        <a href="https://github.com/dikxantbhandari" target="_blank" rel="noopener" class="nav-icon" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.35-1.78-1.35-1.78-1.11-.77.08-.76.08-.76 1.22.09 1.86 1.26 1.86 1.26 1.09 1.86 2.86 1.32 3.56 1.01.11-.8.43-1.32.78-1.62-2.67-.31-5.48-1.34-5.48-5.95 0-1.31.47-2.38 1.25-3.22-.13-.31-.54-1.55.12-3.23 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.68.25 2.92.12 3.23.78.84 1.25 1.91 1.25 3.22 0 4.62-2.81 5.63-5.49 5.93.44.38.83 1.12.83 2.26v3.35c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/>
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/bhandaridikxant" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5Zm.02 5.9H2V22h3V9.4Zm5 0H7.99V22H11v-6.98c0-1.84.35-3.62 2.63-3.62 2.25 0 2.27 2.04 2.27 3.73V22h3v-7.88c0-3.87-2.07-5.66-4.84-5.66-2.26 0-3.25 1.26-3.83 2.14h-.04V9.4Z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/bhandari.dikxant20/" target="_blank" rel="noopener noreferrer" class="nav-icon" aria-label="Instagram"> <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"> 
+          <path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.22.4.56.22.96.48 1.38.9.42.42.69.82.9 1.38.16.42.35 1.05.4 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.4 2.22a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.05.35-2.22.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.22-.4a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.35-1.05-.4-2.22C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.8.4-2.22.22-.56.48-.96.9-1.38.42-.42.82-.69 1.38-.9.42-.16 1.05-.35 2.22-.4C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.14 0-3.51.01-4.75.07-.98.05-1.52.21-1.88.35-.47.18-.8.39-1.15.74-.35.35-.56.68-.74 1.15-.14.36-.3.9-.35 1.88-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.05.98.21 1.52.35 1.88.18.47.39.8.74 1.15.35.35.68.56 1.15.74.36.14.9.3 1.88.35 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.98-.05 1.52-.21 1.88-.35.47-.18.8-.39 1.15-.74.35-.35.56-.68.74-1.15.14-.36.3-.9.35-1.88.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.05-.98-.21-1.52-.35-1.88a2.9 2.9 0 0 0-.74-1.15 2.9 2.9 0 0 0-1.15-.74c-.36-.14-.9-.3-1.88-.35-1.24-.06-1.61-.07-4.75-.07Zm0 3.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8Zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Zm5.7-2.34a1.26 1.26 0 1 1-2.52 0 1.26 1.26 0 0 1 2.52 0Z"/> </svg> </a>
+       
+          <a href="https://mail.google.com/mail/?view=cm&to=dikxantbhandari@gmail.com"
+   target="_blank" rel="noopener" class="nav-icon" aria-label="Email">
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <path d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm2 0v.01L12 11l8-6.99V4H4Zm16 16V7.5l-8 7L4 7.5V20h16Z"/>
+  </svg>
+</a>
+
+
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-white/10 focus:outline-none focus-visible:ring">
+        <span class="sr-only">Toggle menu</span> ☰
+      </button>
+    </nav>
+
+    <!-- Mobile panel -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+      <ul class="px-4 py-3 space-y-2 bg-white/5 backdrop-blur">
+        <li><a href="#about"    class="nav-link block">About</a></li>
+        <li><a href="#projects" class="nav-link block">Projects</a></li>
+        <li><a href="#contact"  class="nav-link block">Contact</a></li>
+        <li class="pt-2">
+          <div class="flex items-center gap-3">
+            <a href="https://github.com/dikxantbhandari" target="_blank" class="nav-icon" aria-label="GitHub">
+           
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.35-1.78-1.35-1.78-1.11-.77.08-.76.08-.76 1.22.09 1.86 1.26 1.86 1.26 1.09 1.86 2.86 1.32 3.56 1.01.11-.8.43-1.32.78-1.62-2.67-.31-5.48-1.34-5.48-5.95 0-1.31.47-2.38 1.25-3.22-.13-.31-.54-1.55.12-3.23 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.68.25 2.92.12 3.23.78.84 1.25 1.91 1.25 3.22 0 4.62-2.81 5.63-5.49 5.93.44.38.83 1.12.83 2.26v3.35c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/bhandaridikxant" target="_blank" class="nav-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5Zm.02 5.9H2V22h3V9.4Zm5 0H7.99V22H11v-6.98c0-1.84.35-3.62 2.63-3.62 2.25 0 2.27 2.04 2.27 3.73V22h3v-7.88c0-3.87-2.07-5.66-4.84-5.66-2.26 0-3.25 1.26-3.83 2.14h-.04V9.4Z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/bhandari.dikxant20/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Instagram"> <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"> <path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.22.4.56.22.96.48 1.38.9.42.42.69.82.9 1.38.16.42.35 1.05.4 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.4 2.22a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.05.35-2.22.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.22-.4a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.35-1.05-.4-2.22C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.8.4-2.22.22-.56.48-.96.9-1.38.42-.42.82-.69 1.38-.9.42-.16 1.05-.35 2.22-.4C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.14 0-3.51.01-4.75.07-.98.05-1.52.21-1.88.35-.47.18-.8.39-1.15.74-.35.35-.56.68-.74 1.15-.14.36-.3.9-.35 1.88-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.05.98.21 1.52.35 1.88.18.47.39.8.74 1.15.35.35.68.56 1.15.74.36.14.9.3 1.88.35 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.98-.05 1.52-.21 1.88-.35.47-.18.8-.39 1.15-.74.35-.35.56-.68.74-1.15.14-.36.3-.9.35-1.88.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.05-.98-.21-1.52-.35-1.88a2.9 2.9 0 0 0-.74-1.15 2.9 2.9 0 0 0-1.15-.74c-.36-.14-.9-.3-1.88-.35-1.24-.06-1.61-.07-4.75-.07Zm0 3.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8Zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Zm5.7-2.34a1.26 1.26 0 1 1-2.52 0 1.26 1.26 0 0 1 2.52 0Z"/> </svg> </a>
+            
+            <a href="https://mail.google.com/mail/?view=cm&to=dikxantbhandari@gmail.com"
+   target="_blank" rel="noopener"class="nav-icon"aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 4h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2 9 6 9-6H3Zm18 12V9l-9 6-9-6v9h18Z"/>
+  </svg>
+</a>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="home" class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+   
+    <section class="min-h-[100vh] flex flex-col justify-center items-center text-center px-4">
+      <div class="reveal max-w-3xl">
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-center text-white whitespace-nowrap">
+          Hi, I am <span class="text-blue-400">Dikxant Bhandari</span>
+        </h1>
+
+        <p class="mt-4 text-2xl sm:text-3xl font-semibold text-slate-200">
+          I am a <span id="typed" class="text-blue-300 type-cursor" aria-live="polite"></span>
+        </p>
+
+        <p class="mt-6 text-lg sm:text-xl text-slate-200/90 max-w-2xl mx-auto">
+          CS & Business @ UNT. I build intelligent interfaces, web apps, and creative digital tools.
+          Open to collaboration, innovation, and exploration in AI, UI/UX, and full-stack projects.
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+         <a
+        href="assets/Dikxant_Bhandari_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-full px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-medium shadow-md shadow-blue-900/30 transition">
+            View Resume
+            </a>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!--  ABOUT  -->
+    
+    <section id="about" class="scroll-mt-24 py-24">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl sm:text-5xl font-extrabold mb-12 text-center text-blue-300 tracking-tight">About Me</h2>
+
+        <div class="grid lg:grid-cols-[320px,1fr] gap-12 items-start">
+          <div class="flex justify-center lg:justify-start">
+            <img src="assets/pic.jpg" alt="Dikxant portrait"
+                 class="rounded-2xl shadow-lg border border-white/10 w-[280px] sm:w-[320px] object-cover aspect-[3/4] hover:scale-[1.02] transition duration-300" />
+          </div>
+
+          <div class="space-y-10 text-slate-200/90">
+            <div class="reveal">
+              <h3 class="text-2xl font-semibold mb-3 text-white">Who I Am</h3>
+              <p class="leading-relaxed text-slate-300/90">
+                Hi, I'm <span class="font-semibold text-blue-300">Dikxant Bhandari</span>, a Computer Science major with a strong interest in software development, problem-solving, and human-centered design. I enjoy working at the intersection of logic and creativity, where thoughtful ideas become practical technology.
+                My focus is on writing clean, efficient code and developing systems that are reliable, scalable, and intuitive to use. I value clarity, collaboration, and continuous learning, and I approach each challenge as an opportunity to grow and refine my craft.
+                Technology inspires me because it constantly evolves, and I aim to be part of that growth by building tools that make a meaningful impact.
+
+              </p>
+            </div>
+
+            <!-- Education cards -->
+            <div class="reveal">
+              <h3 class="text-2xl font-semibold mb-4 text-white">Education</h3>
+              <div class="glass rounded-2xl p-6 space-y-6">
+                <div class="flex gap-5 items-start">
+                  <img src="assets/unt.png" alt="UNT logo" class="w-12 h-12 object-contain rounded-full ring-1 ring-white/20" />
+                  <div>
+                    <p class="font-semibold text-blue-200">University of North Texas — Denton, TX</p>
+                    <p class="text-sm text-slate-300/90"><strong>B.S. Computer Science</strong><br>(Expected May 2028)</p>
+                     <p class="text-sm text-slate-400 mt-1">Cumulative GPA: 3.77 / 4.00 
+                    <p class="text-sm text-slate-400">Relevant Coursework: Data Structures I, Visual Scripting of Games</p>
+                  </div>
+                </div>
+
+                <div class="border-t border-white/10 pt-5 flex gap-5 items-start">
+                  <img src="assets/caldwell.png" alt="Caldwell logo" class="w-12 h-12 object-contain rounded-full ring-1 ring-white/20" />
+                  <div>
+                    <p class="font-semibold text-blue-200">Caldwell University — Caldwell, NJ</p>
+                    <p class="text-sm text-slate-300/90"><strong>B.S. Computer Science</strong> (Aug 2024 – May 2025; Transferred)</p>
+                    <p class="text-sm text-slate-400 mt-1">Cumulative GPA: 3.77 / 4.00 (Dean's List) </p>
+                    <p class="text-sm text-slate-400">Relevant Coursework: UI/UX, Probability & Statistics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="reveal text-center" id="skills">
+              <h3 class="text-4xl sm:text-5xl font-extrabold mb-8">Skills</h3>
+              <div class="skills-wrap">
+                <div class="skills-grid">
+                  <div class="skill-card">
+                    <h4>Languages</h4>
+                    <p>Python (advanced), JavaScript, HTML, CSS, C/C++, SQL</p>
+                  </div>
+                  <div class="skill-card">
+                    <h4>Frameworks</h4>
+                    <p>React, Node.js, Express.js, Tailwind CSS, jQuery</p>
+                  </div>
+                  <div class="skill-card">
+                    <h4>Technologies &amp; Tools</h4>
+                    <p>Git, Figma, Adobe Photoshop, MongoDB, Linux, Raspberry Pi, VS Code</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- PROJECTS -->
+<section id="projects" class="scroll-mt-24 py-24">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="text-4xl sm:text-5xl font-extrabold mb-14 text-blue-300 tracking-tight">
+      Projects
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Project 1 -->
+      <a href="https://devpost.com/software/nindra" target="_blank" class="project-link">
+        <div class="project-card relative overflow-hidden rounded-xl">
+          <img src="assets/project1.png" alt="Kozi.REST project preview" class="project-img">
+
+         
+          <div class="overlay absolute inset-0 flex justify-center items-center bg-black/60 opacity-0 hover:opacity-100 transition duration-300 backdrop-blur-sm">
+            <span class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-blue-400 transition">
+              View Project
+            </span>
+          </div>
+
+          <div class="project-info p-4">
+            <h3 class="project-title">kozi.REST</h3>
+            <p class="project-desc">Smart sleep monitoring system with sensors and AI-generated insights.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <a href="https://devpost.com/software/runsafe" target="_blank" class="project-link">
+        <div class="project-card relative overflow-hidden rounded-xl">
+          <img src="assets/project2.png" alt="RunSafe project preview" class="project-img">
+
+          <div class="overlay absolute inset-0 flex justify-center items-center bg-black/60 opacity-0 hover:opacity-100 transition duration-300 backdrop-blur-sm">
+            <span class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-blue-400 transition">
+              View Project
+            </span>
+          </div>
+
+          <div class="project-info p-4">
+            <h3 class="project-title">RunSafe</h3>
+            <p class="project-desc">AI-based health & air quality app for safer running experiences.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="https://devpost.com/software/baymax-jqlo2b" target="_blank" class="project-link">
+        <div class="project-card relative overflow-hidden rounded-xl">
+          <img src="assets/project3.jpg" alt="HackDartmouth project preview" class="project-img">
+
+          <div class="overlay absolute inset-0 flex justify-center items-center bg-black/60 opacity-0 hover:opacity-100 transition duration-300 backdrop-blur-sm">
+            <span class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-blue-400 transition">
+              View Project
+            </span>
+          </div>
+
+          <div class="project-info p-4">
+            <h3 class="project-title">Baymax AI</h3>
+            <p class="project-desc">Mental health assistant chatbot built with emotion analysis and voice response.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 4 -->
+      <a href="https://devpost.com/software/project-dristi" target="_blank" class="project-link">
+        <div class="project-card relative overflow-hidden rounded-xl">
+          <img src="assets/project4.jpg" alt="HackPrinceton project preview" class="project-img">
+
+          <div class="overlay absolute inset-0 flex justify-center items-center bg-black/60 opacity-0 hover:opacity-100 transition duration-300 backdrop-blur-sm">
+            <span class="px-5 py-2 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-blue-400 transition">
+              View Project
+            </span>
+          </div>
+
+          <div class="project-info p-4">
+            <h3 class="project-title">iSight Smart Cane</h3>
+            <p class="project-desc">Hardware project designed for the visually impaired using ultrasonic sensors.</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+    <!--  CONTACT  -->
+    <section id="contact" class="scroll-mt-24 py-24">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 text-blue-300 tracking-tight">
+      Contact Me
+    </h2>
+    <p class="text-slate-300/90 mb-12 text-lg">
+     Whether you have a project idea, need collaboration, or just want to say hi, 
+      I’d love to hear from you. Drop your message below and I’ll get back to you soon!
+    </p>
+    <form 
+      action="https://formspree.io/f/myznaqgp" 
+      method="POST"
+      class="max-w-2xl mx-auto glass p-8 rounded-2xl space-y-6"
+    >
+      <div class="grid sm:grid-cols-2 gap-6">
+        <input 
+          type="text" 
+          name="Name" 
+          placeholder="Your Name"  
+          class="contact-input" 
+          required
+        >
+        <input 
+          type="email" 
+          name="Email" 
+          placeholder="Your Email" 
+          class="contact-input" 
+          required
+        >
+      </div>
+
+      <textarea 
+        name="Message" 
+        placeholder="Your Message" 
+        rows="5" 
+        class="contact-input resize-none" 
+        required
+      ></textarea>
+
+      <button 
+        type="submit"
+        class="w-full py-3 rounded-full bg-blue-500 hover:bg-blue-400 text-white font-medium shadow-md shadow-blue-900/30 transition"
+      >
+        Send Message
+      </button>
+    </form>
+
+    <p class="text-slate-500 mt-12 text-sm">
+      © 2025 Dikxant Bhandari. All rights reserved.
+    </p>
+  </div>
+</section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
