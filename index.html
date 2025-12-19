@@ -17,13 +17,28 @@
 </head>
 <body class="min-h-screen text-slate-100 selection:bg-blue-300/30 selection:text-white relative overflow-x-hidden">
 
-  <!--  VIDEO -->
+  <!-- Star background -->
+  <div class="sky">
+    <div class="stars layer1"></div>
+    <div class="stars layer2"></div>
+    <div class="stars layer3"></div>
+
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+  </div>
+
+ <!-- VIDEO
   <video autoplay muted loop playsinline id="bgVideo"
          class="fixed inset-0 w-full h-full object-cover z-[-2] brightness-[0.35] saturate-[1.2] contrast-[1.1]">
     <source src="assets/bg.mp4" type="video/mp4" />
   </video>
   
-  <div class="fixed inset-0 bg-gradient-to-b from-[#0a1630] via-[#081226] to-[#050b1c] z-[-3]"></div>
+  <div class="fixed inset-0 bg-gradient-to-b from-[#0a1630] via-[#081226] to-[#050b1c] z-[-3]"></div> -->
+
+
+ 
+
 
   <!--NAVBAR-->
   <header class="navbar sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/5 border-b border-white/10">
@@ -137,27 +152,43 @@
 
     <!--  ABOUT  -->
     
-    <section id="about" class="scroll-mt-24 py-24">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <h2 class="text-4xl sm:text-5xl font-extrabold mb-12 text-center text-blue-300 tracking-tight">About Me</h2>
+   <section id="about" class="scroll-mt-24 py-24">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <h2 class="text-4xl sm:text-5xl font-extrabold mb-12 text-center text-blue-300 tracking-tight">
+      About Me
+    </h2>
 
-        <div class="grid lg:grid-cols-[320px,1fr] gap-12 items-start">
-          <div class="flex justify-center lg:justify-start">
-            <img src="assets/pic.jpg" alt="Dikxant portrait"
-                 class="rounded-2xl shadow-lg border border-white/10 w-[280px] sm:w-[320px] object-cover aspect-[3/4] hover:scale-[1.02] transition duration-300" />
-          </div>
+    <!-- WHO I AM LAYOUT -->
+    <div class="about-grid">
+      
+      <!-- Photo -->
+      <div class="about-photo">
+        <img
+          src="assets/pic.jpg"
+          alt="Dikxant portrait"
+          class="rounded-2xl border border-white/10 shadow-lg object-cover"
+        />
+      </div>
 
-          <div class="space-y-10 text-slate-200/90">
-            <div class="reveal">
-              <h3 class="text-2xl font-semibold mb-3 text-white">Who I Am</h3>
-              <p class="leading-relaxed text-slate-300/90">
-                Hi, I'm <span class="font-semibold text-blue-300">Dikxant Bhandari</span>, a Computer Science major with a strong interest in software development, problem-solving, and human-centered design. I enjoy working at the intersection of logic and creativity, where thoughtful ideas become practical technology.
-                My focus is on writing clean, efficient code and developing systems that are reliable, scalable, and intuitive to use. I value clarity, collaboration, and continuous learning, and I approach each challenge as an opportunity to grow and refine my craft.
-                Technology inspires me because it constantly evolves, and I aim to be part of that growth by building tools that make a meaningful impact.
+      <!-- Text -->
+      <div class="about-text reveal">
+        <h3 class="text-3xl sm:text-4xl font-extrabold mb-5 text-white">Who I Am</h3>
+        <p class="leading-relaxed text-slate-300/90">
+          Hi, I'm <span class="font-bold text-blue-300">Dikxant Bhandari</span>,
+         a Computer Science major with a strong interest in software development, problem-solving, and human-centered design.
+          I enjoy working at the intersection of logic and creativity, where thoughtful ideas become practical technology. My focus is on writing clean, 
+          efficient code and developing systems that are reliable, scalable, and intuitive to use. I value clarity, collaboration, and continuous learning,
+           and I approach each challenge as an opportunity to grow and refine my craft. Technology inspires me because it constantly evolves, 
+           and I aim to be part of that growth by building tools that make a meaningful impact.
+        </p>
+      </div>
 
-              </p>
-            </div>
+    </div>
+  </div>
+</section>
 
+
+            
             <!-- Education cards -->
             <div class="reveal">
               <h3 class="text-2xl font-semibold mb-4 text-white">Education</h3>
@@ -184,6 +215,27 @@
               </div>
             </div>
 
+
+            <!-- Experiences -->
+            <div class="reveal">
+              <h3 class="text-2xl font-semibold mb-4 text-white">Experiences</h3>
+              <div class="glass rounded-2xl p-6 space-y-6">
+                <div class="flex gap-5 items-start">
+                  <img src="assets/moksha.jpg" alt="Moksha logo" class="w-12 h-12 object-contain rounded-full ring-1 ring-white/20" />
+                  <div>
+                    <p class="font-semibold text-blue-200">Moksha Enterprises Pvt. Ltd — Birendranagar, Nepal</p>
+                    <p class="text-sm text-slate-300/90"><strong>Software Engineer Intern &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Aug 2023 – Jul 2024)</strong> </p>
+                     <p class="text-sm text-slate-400 mt-1">&#x2022; Assisted in developing and maintaining the company website, contributing to front-end updates, content integration, and feature improvements.</p>
+
+
+                    <p class="text-sm text-slate-400">&#x2022; Identified and fixed functional and logical bugs, tested website behavior, and collaborated with the team to improve overall performance and reliability.</p>
+                  </div>
+                </div>
+
+               
+              </div>
+            </div>
+
             <!-- Skills -->
             <div class="reveal text-center" id="skills">
               <h3 class="text-4xl sm:text-5xl font-extrabold mb-8">Skills</h3>
@@ -191,15 +243,15 @@
                 <div class="skills-grid">
                   <div class="skill-card">
                     <h4>Languages</h4>
-                    <p>Python (advanced), JavaScript, HTML, CSS, C/C++, SQL</p>
+                    <p>Python, JavaScript, TypeScript, C/C++, Java, PHP</p>
                   </div>
                   <div class="skill-card">
-                    <h4>Frameworks</h4>
-                    <p>React, Node.js, Express.js, Tailwind CSS, jQuery</p>
+                    <h4>Frameworks & Libraries</h4>
+                    <p>React, Express.js, Node.js, Next.js, Tailwind CSS, FastAPI, PyTorch, NumPy, Pandas</p>
                   </div>
                   <div class="skill-card">
                     <h4>Technologies &amp; Tools</h4>
-                    <p>Git, Figma, Adobe Photoshop, MongoDB, Linux, Raspberry Pi, VS Code</p>
+                    <p>Git, Figma, MongoDB, Linux, Raspberry Pi, Docker, Unreal Engine </p>
                   </div>
                 </div>
               </div>
