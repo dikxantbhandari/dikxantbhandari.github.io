@@ -493,3 +493,8 @@ body{
     max-width: 100%;
   }
 }
+.ecard:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(59,130,246,0.4);
+  border-color: rgba(96,165,250,0.4);
+}
